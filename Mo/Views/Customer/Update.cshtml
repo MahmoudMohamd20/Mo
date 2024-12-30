@@ -1,0 +1,29 @@
+﻿@model Mo.Models.Customer
+
+<form asp-action="Update" method="post" asp-controller="Customer">
+	<input type="hidden" name="Id" value="@Model.Id" />
+	<div>
+		<h1 style="margin-left:400px;">Update Customer</h1>
+
+
+		<div style="margin-left:400px;">
+
+			<label>Name</label>
+			<br />
+			<input style="width:300px;" type="text" name="name" />
+			<br />
+			<label>Age</label>
+			<br />
+			<input style="width:300px;" type="number" name="age" />
+			<br />
+			
+			<br />
+		</div>
+
+	</div>
+
+	<button style="margin-left:500px; margin-top:25px;" class="btn btn-success" type="submit">Update</button>
+
+
+
+</form>

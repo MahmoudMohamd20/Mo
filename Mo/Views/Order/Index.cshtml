@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Mo.Models.Order>
+
+<table class="table">
+
+	<tr>
+		<th>ID</th>
+		<th>TotalAmount</th>
+		<th>CustomerID</th>
+		<th>ProductID</th>
+		<th>Action</th>
+
+	</tr>
+
+	@foreach(var show in Model){
+
+		<tr>
+
+			<td>@show.Id</td>
+			<td>@show.total</td>
+			<td>@show.CustomerID</td>
+			<td>@show.ProductID</td>
+
+			<td>
+
+			<a class="btn btn-success" href="@Url.Action("Update","Order",new {id = show.Id})">Update</a>
+			<a class="btn btn-danger" href="@Url.Action("Delete","Order",new {id = show.Id})">Delete</a>
+			<a class="btn btn-primary" href="@Url.Action("ViewForm","Order",new {id = show.Id})">View</a>
+			</td>
+
+		</tr>
+	}
+
+	<a class="btn btn-success" href="@Url.Action("Create","Order")">Add</a>
+
+</table>

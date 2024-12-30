@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Mo.Models.Customer>
+
+<table class="table">
+
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Action</th>
+	</tr>
+
+	@foreach(var show in Model){
+
+		<tr>
+
+			<td>@show.Id</td>
+			<td>@show.name</td>
+			<td>@show.age</td>
+			<td>
+
+				<a class="btn btn-success" href="@Url.Action("Update","Customer",new {id = show.Id})">Update</a>
+				<a class="btn btn-danger" href="@Url.Action("Delete","Customer",new {id = show.Id})">Delete</a>
+
+
+			</td>
+
+
+		</tr>
+
+	}
+
+
+
+</table>
+
+<form asp-action="Create" method="post" asp-controller="Customer">
+	<label>Name</label>
+	<br />
+	<input class="form-control" type="text" name="name" />
+	<br />
+	<label>Age</label>
+	<br />
+	<input class="form-control" type="number" name="age" />
+	<br />
+
+	<br />
+
+	<button style="width:200px;margin-top:15px;" class="btn btn-success" type="submit">Add</button>
+
+
+</form>
+

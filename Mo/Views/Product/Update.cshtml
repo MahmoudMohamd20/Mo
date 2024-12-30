@@ -1,0 +1,29 @@
+﻿@model Mo.Models.Product
+
+<form asp-action="Update" method="post" asp-controller="Product"> 
+	<input type="hidden" name="Id" value="@Model.Id" />
+
+	<div>
+		<h1 style="margin-left:400px;">Update Customer</h1>
+
+
+		<div style="margin-left:400px;">
+
+			<label>Price</label>
+			<br />
+			<input style="width:300px;" type="number" name="price" />
+			<br />
+			<label>Description</label>
+			<br />
+			<input style="width:300px;" type="text" name="description" />
+			<br />
+
+			<br />
+		</div>
+
+	</div>
+
+	<button style="margin-left:500px; margin-top:25px;" class="btn btn-success" type="submit">Update</button>
+
+
+</form>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Mo.Models.Product>
+<table class="table">
+
+	<tr>
+
+		<th>ID</th>
+		<th>Price</th>
+		<th>Description</th>
+		<th>Action</th>
+
+	</tr>
+
+	@foreach(var show in Model){
+		<tr>
+
+			<td>@show.Id</td>
+			<td>@show.price</td>
+			<td>@show.description</td>
+
+			<td>
+
+				<a class="btn btn-success" href="@Url.Action("Update","Product",new{id = show.Id})">Update</a>
+				<a class="btn btn-danger" href="@Url.Action("Delete","Product",new {id = show.Id})">Delete</a>
+			</td>
+
+		</tr>
+	}
+
+	<a class="btn btn-success" href="@Url.Action("Create","Product")">Add</a>
+
+</table>

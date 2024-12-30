@@ -1,0 +1,34 @@
+﻿@model Mo.Models.Order
+
+<form asp-action="Update" method="post" asp-controller="Order">
+<input type="hidden" name="Id" value="@Model.Id" />
+
+	<div>
+		<h1 style="margin-left:400px;">Update Customer</h1>
+
+
+		<div style="margin-left:400px;">
+
+			<label>Total</label>
+			<br />
+			<input style="width:300px;" type="number" name="total" />
+			<br />
+			<label>CustomerID</label>
+			<br />
+			<input style="width:300px;" type="number" name="CustomerID" />
+			<br />
+			<label>ProductID</label>
+			<br />
+			<input style="width:300px;" type="number" name="ProductID" />
+			<br />
+
+			<br />
+		</div>
+
+	</div>
+
+	<button style="margin-left:500px; margin-top:25px;" class="btn btn-success" type="submit">Update</button>
+
+
+
+</form>

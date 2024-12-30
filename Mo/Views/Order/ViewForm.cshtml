@@ -1,0 +1,34 @@
+﻿@model Mo.Models.Order
+
+<table class="table">
+	<tr>
+
+	<th>ID</th>
+	<th>TotalAmount</th>
+	<th>CustomerID</th>
+	<th>CustomerName</th>
+	<th>CustomerAge</th>
+	<th>ProductId</th>
+	<th>ProductPrice</th>
+	<th>Description</th>
+
+	</tr>
+
+
+
+	<tr>
+
+		<td>@Model.Id</td>
+		<td>@Model.total</td>
+		<td>@Model.CustomerID</td>
+		<td>@Model.Customer.name</td>
+		<td>@Model.Customer.age</td>
+		<td>@Model.ProductID</td>
+		<td>@Model.Product.price</td>
+		<td>@Model.Product.description</td>
+
+	</tr>
+
+
+
+</table>

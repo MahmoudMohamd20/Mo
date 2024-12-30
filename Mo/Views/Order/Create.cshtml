@@ -1,0 +1,22 @@
+﻿@model Mo.Models.Order
+<form asp-action="Create" method="post" asp-controller="Order">
+	<label>TotalAmount</label>
+	<br />
+	<input class="form-control" type="number" name="total" />
+	<br />
+	<label>CustomerID</label>
+	<br />
+	<input class="form-control" type="number" name="CustomerID" />
+	<br />
+	<label>ProductID</label>
+	<br />
+	<input class="form-control" type="number" name="ProductID" />
+	<br />
+
+	<br />
+
+	<button style="width:200px;margin-top:15px;" class="btn btn-success" type="submit">Add</button>
+
+
+</form>
+
